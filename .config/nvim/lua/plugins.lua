@@ -20,6 +20,20 @@ require('telescope').setup{
     }
 }
 
+-- use {
+--    "williamboman/mason.nvim",
+--    "williamboman/mason-lspconfig.nvim",
+--    "neovim/nvim-lspconfig",
+--} 
+
+use {
+  'mfussenegger/nvim-jdtls'
+}
+
+--require("mason").setup()
+--require("mason-lspconfig").setup()
+
+
 end)
 
 
