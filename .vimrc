@@ -1,4 +1,4 @@
 syntax on
 filetype on
-set number
-set scrolloff=5
+set relativenumber
+set scrolloff=7
