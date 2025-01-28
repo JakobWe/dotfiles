@@ -2,7 +2,7 @@ vim.keymap.set("n", " ", "<NOP>")
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>b", ":b1<CR>")
+vim.keymap.set("n", "<leader>b", ":Ex<CR>")
 vim.keymap.set("n", "<leader>n", ":edit ")
 
 
