@@ -33,6 +33,9 @@ use {
 --require("mason").setup()
 --require("mason-lspconfig").setup()
 
+use {
+  'ibhagwan/fzf-lua'
+}
 
 end)
 

@@ -7,4 +7,5 @@ require('plugins')
 require('keymap')
 
 vim.opt.relativenumber = true
+vim.opt.number = true
 vim.opt.scrolloff = 7
