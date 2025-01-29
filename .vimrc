@@ -14,7 +14,5 @@ call plug#end()
 nmap s <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 
-
 nmap <Leader>L <Plug>(easymotion-overwin-line)
-
 nmap <Leader>w <Plug>(easymotion-overwin-w)

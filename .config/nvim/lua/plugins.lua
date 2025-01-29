@@ -37,6 +37,13 @@ use {
   'ibhagwan/fzf-lua'
 }
 
+
+
+use {
+	'easymotion/vim-easymotion'
+}
+
+
 end)
 
 
