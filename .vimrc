@@ -11,7 +11,7 @@ Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
-nmap s <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f)
 let g:EasyMotion_smartcase = 1
 
 nmap <Leader>L <Plug>(easymotion-overwin-line)

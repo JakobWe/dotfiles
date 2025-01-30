@@ -1,6 +1,6 @@
 source ~/.vimrc
 
-nmap s <Plug>(easymotion-f2)
+nmap s <Plug>(easymotion-f)
 nmap <Leader>l <Plug>(easymotion-bd-jk)
 
 nmap <Leader>w <Plug>(easymotion-bd-w)

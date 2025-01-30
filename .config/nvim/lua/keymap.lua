@@ -20,7 +20,7 @@ vim.api.nvim_set_keymap('n', '<leader>fn',
   { noremap = true, silent = true })
 
 -- easymotion
-vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f2)')
+vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f)')
 vim.keymap.set('n', '<leader>l', '<Plug>(easymotion-overwin-line)')
 vim.keymap.set('n', '<leader>w', '<Plug>(easymotion-overwin-w)')
 
