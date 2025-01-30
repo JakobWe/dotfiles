@@ -53,6 +53,10 @@ use {
 }
 
 
+use {
+	'easymotion/vim-easymotion'
+}
+
 
 end)
 
