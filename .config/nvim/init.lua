@@ -16,3 +16,4 @@ vim.opt.scrolloff = 7
 
 vim.g.EasyMotion_smartcase = 1
 
+vim.o.scroll = 5

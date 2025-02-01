@@ -5,6 +5,14 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>b", ":Ex<CR>")
 vim.keymap.set("n", "<leader>n", ":edit ")
 
+vim.api.nvim_set_keymap('n', 'm', '<C-e>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ',', '<C-y>', { noremap = true, silent = true })
+
+
+
+
+
+
 --telescope
 local builtin = require('telescope.builtin')
 -- vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
