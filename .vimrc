@@ -7,14 +7,25 @@ set relativenumber
 set scrolloff=7
 set scroll=5
 
+
 set ignorecase
 set smartcase
 "set signcolumn=yes
 set updatetime=250
 
+
+nmap <Esc> <cmd>nohlsearch<CR>
+
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
 nmap . ;
-map ä /
+map ö /
+
+nnoremap <c-s> <Nop>
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+vmap <c-s> <Esc>:w<CR>a
+
+map <c-w> <Esc>:q<CR>
 
 "Easymotion setup for vim, in nvim it is done by packer
 if !has('nvim')
