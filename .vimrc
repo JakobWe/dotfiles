@@ -12,7 +12,9 @@ set smartcase
 "set signcolumn=yes
 set updatetime=250
 
+"Keybindings that make some common keys easier to reach on a qwertz keyboard
 nmap . ;
+map ä /
 
 "Easymotion setup for vim, in nvim it is done by packer
 if !has('nvim')
@@ -28,14 +30,10 @@ endif
 
 "System clipboard
 if has('mac')
-  nmap <Leader>y "*y
-  vmap <Leader>y "*y
-  nmap <Leader>p "*p
-  vmap <Leader>p "*p
+  map <Leader>y "*y
+  map <Leader>p "*p
 elseif has('unix')
-  nmap <Leader>y "+y
-  vmap <Leader>y "+y
-  nmap <Leader>p "+p
-  vmap <Leader>p "+p
+  map <Leader>p "+p
+  map <Leader>p "+p
 endif
 
