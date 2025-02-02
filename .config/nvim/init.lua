@@ -1,19 +1,12 @@
+vim.cmd('source ~/.vimrc')
+
 print("Hello World")
 
 require('ensure_packer')
 
 require('plugins')
-
 require('keymap')
 
 require('treesitterconf')
 require('colors')
 
-
-vim.opt.relativenumber = true
-vim.opt.number = true
-vim.opt.scrolloff = 7
-
-vim.g.EasyMotion_smartcase = 1
-
-vim.o.scroll = 5
