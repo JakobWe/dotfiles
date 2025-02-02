@@ -33,7 +33,7 @@ if has('mac')
   map <Leader>y "*y
   map <Leader>p "*p
 elseif has('unix')
-  map <Leader>p "+p
+  map <Leader>y "+y
   map <Leader>p "+p
 endif
 
