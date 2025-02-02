@@ -4,6 +4,7 @@ let mapleader = " "
 syntax on
 filetype on
 set relativenumber
+set number
 set scrolloff=7
 set scroll=5
 

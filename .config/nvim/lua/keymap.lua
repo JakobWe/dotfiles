@@ -9,8 +9,21 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
---Fzf
+
 vim.keymap.set('n', '<leader>ff', ":FzfLua files<CR>")
+--vim.keymap.set('n', '<leader>fp', require('fzf-lua').files( { cmd = "rg -g '*pom.xml'"}))
+
+vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')
+
+
+vim.keymap.set('n', '<leader>fp', 
+  function()
+    require('fzf-lua').files({
+	    cmd = "rg --files -g 'pom.xml' ~/",
+    })
+  end)
+
+
 
 -- easymotion
 vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f)')
