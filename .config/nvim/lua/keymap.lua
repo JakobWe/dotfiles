@@ -2,6 +2,9 @@ vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("n", "<leader>n", ":edit ")
 
 
+vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>")
+
+
 --telescope
 local builtin = require('telescope.builtin')
 -- vim.keymap.set('n', '<leader>ff', builtinvim.keymap.set("n", "<leader>y", '"0y').find_files, { desc = 'Telescope find files' })
@@ -19,7 +22,7 @@ vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')
 vim.keymap.set('n', '<leader>fp', 
   function()
     require('fzf-lua').files({
-	    cmd = "rg --files -g 'pom.xml' ~/",
+	    cmd = "rg --files -g 'pom.xml' ~/VV/",
     })
   end)
 
@@ -29,3 +32,7 @@ vim.keymap.set('n', '<leader>fp',
 vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f)')
 vim.keymap.set('n', '<leader>l', '<Plug>(easymotion-overwin-line)')
 vim.keymap.set('n', '<leader>w', '<Plug>(easymotion-overwin-w)')
+
+
+
+--vim.keymap.set('n', '<leader>dk', ':!docker ps -q | xargs docker kill && docker system prune -f<CR>')

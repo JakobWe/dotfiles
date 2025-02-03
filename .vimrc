@@ -15,8 +15,6 @@ set smartcase
 set updatetime=250
 
 
-nmap <Esc> <cmd>nohlsearch<CR>
-
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
 map ö /
 
@@ -53,4 +51,8 @@ elseif has('unix')
   map <Leader>y "+y
   map <Leader>p "+p
 endif
+
+
+
+nmap <leader>dk :!docker ps -q \| xargs docker kill && docker system prune -f<CR><CR>
 
