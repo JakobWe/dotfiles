@@ -26,6 +26,13 @@ vim.keymap.set('n', '<leader>fp',
     })
   end)
 
+vim.keymap.set('n', '<leader>ftt', 
+  function()
+    require('fzf-lua').live_grep({
+	    cmd = "rg -z",
+    })
+  end)
+
 
 
 -- easymotion

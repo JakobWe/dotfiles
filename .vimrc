@@ -1,6 +1,11 @@
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 
+
+"Key repeat on mac os:
+"defaults write -g ApplePressAndHoldEnabled -bool false
+
+
 syntax on
 filetype on
 set relativenumber
@@ -53,6 +58,5 @@ elseif has('unix')
 endif
 
 
-
-nmap <leader>dk :!docker ps -q \| xargs docker kill && docker system prune -f<CR><CR>
+nmap <leader>dk :!~/.vim/scripts/docker_purge.sh
 
