@@ -58,5 +58,5 @@ elseif has('unix')
 endif
 
 
-nmap <leader>dk :!~/.vim/scripts/docker_purge.sh
+nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
 
