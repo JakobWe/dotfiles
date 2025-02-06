@@ -43,3 +43,24 @@ vim.keymap.set('n', '<leader>w', '<Plug>(easymotion-overwin-w)')
 
 
 --vim.keymap.set('n', '<leader>dk', ':!docker ps -q | xargs docker kill && docker system prune -f<CR>')
+
+
+
+
+
+
+require("nvim-treesitter.configs").setup {
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			node_incremental = "v",
+			node_decremental = "V",
+		},
+	}, 
+}
+
+
+
+
+
+

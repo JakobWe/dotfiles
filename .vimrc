@@ -12,7 +12,8 @@ set relativenumber
 set number
 set scrolloff=7
 set scroll=5
-
+set tabstop=2
+set shiftwidth=2
 
 set ignorecase
 set smartcase
@@ -21,7 +22,10 @@ set updatetime=250
 
 
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
-map ö /
+map ä /
+map ö ;
+map Ö ,
+
 
 nmap <leader><c-s> :w<CR>
 "imap <leader><c-s> <Esc>:w<CR>a
