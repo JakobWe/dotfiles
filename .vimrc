@@ -10,7 +10,8 @@ syntax on
 filetype on
 set relativenumber
 set number
-set scrolloff=7
+set nowrapscan
+set scrolloff=10
 set scroll=5
 set tabstop=2
 set shiftwidth=2
