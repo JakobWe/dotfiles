@@ -22,18 +22,32 @@ vim.keymap.set('n', '<leader>fp',
   end)
 
 -- Lsp
---require('telescope.builtin').lsp_references()
-vim.keymap.set('n', '<leader>fu', builtin.lsp_references, { desc = 'Telescope find usages' })
+vim.keymap.set('n', '<leader>fu', 
+	function()
+		require('telescope.builtin').lsp_references({
+			jump_type = 'tab',
+			reuse_win = 'true'
+		})
+	end)
 
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 
-vim.keymap.set('n', '<leader>ftt', 
+vim.keymap.set('n', '<leader>fyy', 
   function()
-    require('fzf-lua').live_grep({
-	    cmd = "rg -z",
-    })
+    require('telescope.builtin').live_grep({
+			vimgrep_arguments  = {
+      "rg",
+      "-L",
+			"-z",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+    }
+	 })
   end)
-
-
 
 -- easymotion
 vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f)')
