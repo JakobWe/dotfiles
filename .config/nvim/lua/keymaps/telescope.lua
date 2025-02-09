@@ -1,11 +1,3 @@
-vim.keymap.set("n", "<leader>e", ":Ex<CR>")
-vim.keymap.set("n", "<leader>n", ":edit ")
-
-
-vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>")
-
-
---telescope
 local builtin = require('telescope.builtin')
 -- vim.keymap.set('n', '<leader>ff', builtinvim.keymap.set("n", "<leader>y", '"0y').find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
@@ -16,85 +8,34 @@ vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---local actions_state = require("telescope.actions.state")
---local actions = require("telescope.actions")
-
-local print_selected_entry = function(prompt_bufnr)
-
+local change_to_files_directory = function(prompt_bufnr)
 	local actions_state = require("telescope.actions.state")
 	local actions = require("telescope.actions")
 
 	local selected_entry = actions_state.get_selected_entry()
-
 	local path = actions_state.get_selected_entry().path
-
 	local regex = "^(.*/)"
-
 	local result = string.match(path, regex)
-
-	vim.keymap.set('n', '<leader>who', ":" .. result)
+  vim.cmd(':cd ' .. result)
 	actions.close(prompt_bufnr)
 end
 
 
-vim.keymap.set('n', '<leader>fä',
+vim.keymap.set('n', '<leader>fp',
 	function()
 		require("telescope.builtin").find_files({
 			search_file = 'pom.xml',
-			cwd = '~/Git',
-
-attach_mappings = function(_, map)
-			map("n", "<cr>", print_selected_entry)
-			map("i", "<cr>", print_selected_entry)
-			return true
-		end,
-
-	})
-end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--- Lsp
-vim.keymap.set('n', '<leader>fu', 
-	function()
-		require('telescope.builtin').lsp_references({
-			jump_type = 'tab',
-			reuse_win = 'true'
+			cwd = '~',
+			attach_mappings = function(_, map)
+				map("n", "<cr>", change_to_files_directory)
+				map("i", "<cr>", change_to_files_directory)
+				return true
+			end,
 		})
 	end)
 
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
+
+
 
 vim.keymap.set('n', '<leader>fyy', 
   function()
@@ -112,26 +53,6 @@ vim.keymap.set('n', '<leader>fyy',
     }
 	 })
   end)
-
--- easymotion
-vim.keymap.set('n', 's', '<Plug>(easymotion-overwin-f)')
-vim.keymap.set('n', '<leader>l', '<Plug>(easymotion-overwin-line)')
-vim.keymap.set('n', '<leader>w', '<Plug>(easymotion-overwin-w)')
-
-
-
-
-require("nvim-treesitter.configs").setup {
-	incremental_selection = {
-		enable = true,
-		keymaps = {
-			node_incremental = "v",
-			node_decremental = "V",
-		},
-	}, 
-}
-
-
 
 
 

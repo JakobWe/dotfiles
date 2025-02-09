@@ -2,7 +2,7 @@ vim.cmd('source ~/.vimrc')
 
 print("Hello World")
 
-require('keymap')
+require('keymaps')
 
 require('ensure_packer')
 
