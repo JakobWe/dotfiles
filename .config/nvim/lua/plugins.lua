@@ -18,18 +18,15 @@ return require('packer').startup(function(use)
 		}
 	}
 
--- use {
---    "williamboman/mason.nvim",
---    "williamboman/mason-lspconfig.nvim",
---    "neovim/nvim-lspconfig",
---} 
-
+ use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+	} 
+	
 	use {
 		'mfussenegger/nvim-jdtls'
 	}
-
---require("mason").setup()
---require("mason-lspconfig").setup()
 
 	use {
 		'ibhagwan/fzf-lua'

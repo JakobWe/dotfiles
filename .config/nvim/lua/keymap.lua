@@ -14,12 +14,76 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.keymap.set('n', '<leader>ff', ":FzfLua files<CR>")
 vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')
 
-vim.keymap.set('n', '<leader>fp', 
-  function()
-    require('fzf-lua').files({
-	    cmd = "rg --files -g 'pom.xml' ~/VV/",
-    })
-  end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--local actions_state = require("telescope.actions.state")
+--local actions = require("telescope.actions")
+
+local print_selected_entry = function(prompt_bufnr)
+
+	local actions_state = require("telescope.actions.state")
+	local actions = require("telescope.actions")
+
+	local selected_entry = actions_state.get_selected_entry()
+
+	local path = actions_state.get_selected_entry().path
+
+	local regex = "^(.*/)"
+
+	local result = string.match(path, regex)
+
+	vim.keymap.set('n', '<leader>who', ":" .. result)
+	actions.close(prompt_bufnr)
+end
+
+
+vim.keymap.set('n', '<leader>fä',
+	function()
+		require("telescope.builtin").find_files({
+			search_file = 'pom.xml',
+			cwd = '~/Git',
+
+attach_mappings = function(_, map)
+			map("n", "<cr>", print_selected_entry)
+			map("i", "<cr>", print_selected_entry)
+			return true
+		end,
+
+	})
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- Lsp
 vim.keymap.set('n', '<leader>fu', 
