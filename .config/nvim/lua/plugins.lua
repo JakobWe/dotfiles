@@ -46,8 +46,11 @@ return require('packer').startup(function(use)
 			vim.cmd("colorscheme rose-pine")
 		end
 	}
+use { "qaptoR-nvim/chocolatier.nvim" }
 
+use {"pappasam/papercolor-theme-slim"}
 
+use {"ellisonleao/gruvbox.nvim"}
 	use {
 		'easymotion/vim-easymotion'
 	}

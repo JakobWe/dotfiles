@@ -1,1 +1,12 @@
-vim.cmd("colorscheme rose-pine")
+--vim.cmd("colorscheme rose-pine")
+
+--require('chocolatier').setup({
+--	contrast = "hard",
+	--transparent_mode = true,
+--})
+--vim.o.background = "light" -- or "light" for light mode
+--vim.cmd("colorscheme chocolatier")
+
+vim.o.background = 'light'
+--vim.cmd("colorscheme PaperColorSlimLight")
+vim.cmd('colorscheme gruvbox')
