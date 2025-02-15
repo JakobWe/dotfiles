@@ -1,3 +1,6 @@
+vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+
 return {
 	'williamboman/mason.nvim',
 	{
