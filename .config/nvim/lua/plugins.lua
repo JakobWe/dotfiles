@@ -22,15 +22,49 @@ return {
 					},
 				}
 			}
+			telescope.load_extension('fzf')
 		end,
 	},
+
+
+
+
+
+
+
+
+
 	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
+	{
+		'williamboman/mason-lspconfig.nvim',
+		config = function()
+			require("mason").setup()
+			require("mason-lspconfig").setup {
+				ensure_installed = { "jdtls", "vimls", "hydra_lsp", "eslint", "bashls", "lua_ls", "pyright" },
+				-- "nginx_language-server"
+			}
+		end,
+
+
+
+
+
+
+	},
 	'neovim/nvim-lspconfig',
 	'mfussenegger/nvim-jdtls',
 
+
+
+
+
+
+
+
+
+
 	{ 'ibhagwan/fzf-lua' },
-	{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+	{ 'nvim-treesitter/nvim-treesitter',          build = ':TSUpdate' },
 
 
 	'easymotion/vim-easymotion',
