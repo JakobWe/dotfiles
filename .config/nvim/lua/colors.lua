@@ -7,6 +7,6 @@
 --vim.o.background = "light" -- or "light" for light mode
 --vim.cmd("colorscheme chocolatier")
 
-vim.o.background = 'light'
+vim.o.background = 'dark'
 --vim.cmd("colorscheme PaperColorSlimLight")
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme everforest')
