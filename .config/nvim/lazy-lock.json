@@ -12,7 +12,6 @@
   "nvim-jdtls": { "branch": "master", "commit": "2f7bff9b8d2ee1918b36ca55f19547d9d335a268" },
   "nvim-lspconfig": { "branch": "master", "commit": "7af2c37192deae28d1305ae9e68544f7fb5408e1" },
   "nvim-treesitter": { "branch": "master", "commit": "80e6de9d24eec68d82d5f4e6feae94c9c753ebd6" },
-  "packer.nvim": { "branch": "master", "commit": "ea0cc3c59f67c440c5ff0bbe4fb9420f4350b9a3" },
   "papercolor-theme-slim": { "branch": "main", "commit": "748950c7aa3b934bcc7f774f3bf8235f093fec62" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "2a5ceff981501cff8f46871d5402cd3378a8ab6a" },

@@ -1,0 +1,16 @@
+
+
+
+theme = Everforest Dark - Hard
+
+# keybind=space>t>r=reload_config 
+# keybind=space>t>c=clear_screen
+
+keybind=ctrl+shift+r=reload_config 
+keybind=ctrl+shift+c=clear_screen
+
+# keybind=space>t>t=new_tab
+
+
+# keybind=ctrl+shift+w=close_window
+# keybind=global:cmd+t=toggle_quick_terminal
