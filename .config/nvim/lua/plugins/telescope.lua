@@ -37,8 +37,8 @@ return {
 
 
 			local change_to_files_directory = function(prompt_bufnr)
-				local actions_state = telescope.actions.state
-				local actions = telescope.actions
+				local actions_state = require('telescope.actions.state')
+				local actions = require('telescope.actions')
 
 				local selected_entry = actions_state.get_selected_entry()
 				local path = actions_state.get_selected_entry().path
@@ -51,7 +51,7 @@ return {
 
 			vim.keymap.set('n', '<leader>fp',
 				function()
-					telescope.find_files({
+						builtin.find_files({
 						search_file = 'pom.xml',
 						cwd = '~',
 						attach_mappings = function(_, map)
