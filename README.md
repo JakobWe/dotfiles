@@ -25,6 +25,14 @@ dotfiles add .tmux.conf
 dotfiles commit -m "Add .tmux.conf"
 dotfiles push
 ```
+
+Don't show untracked files:
+```
+dotfiles config --local status.showUntrackedFiles no
+```
+
+
+
 # Setting Up a New Machine
 
 To set up a new machine to use your version controlled config files, all you need to do is to clone the repository on your new machine telling git that it is a bare repository:

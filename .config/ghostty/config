@@ -3,6 +3,10 @@
 
 theme = Everforest Dark - Hard
 
+
+font-size=18
+
+
 # keybind=space>t>r=reload_config 
 # keybind=space>t>c=clear_screen
 
