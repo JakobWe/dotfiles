@@ -21,6 +21,8 @@ set smartcase
 "set signcolumn=yes
 set updatetime=250
 
+set completeopt=menuone,noinsert
+
 
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
 map ä /
@@ -64,4 +66,10 @@ endif
 
 
 nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
+
+
+
+
+hi Normal guibg=NONE ctermbg=NONE
+
 

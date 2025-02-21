@@ -9,4 +9,8 @@ return {
 	'ellisonleao/gruvbox.nvim',
 	'qaptoR-nvim/chocolatier.nvim',
 	'pappasam/papercolor-theme-slim',
+
+
+
+'xiyaowong/transparent.nvim'
 }

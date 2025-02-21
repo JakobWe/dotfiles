@@ -6,6 +6,15 @@ vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
 
 
 
+
+vim.lsp.handlers["textDocument/completion"] = function(_, result, ctx, config)
+  --print(vim.inspect(result))  -- This will show the completion result from the server
+  vim.cmd(":!echo " .. vim.inspect(result) ..  "> ttttttt.txt")  -- This will show the completion result from the server
+end
+
+
+vim.keymap.set("i", "olla", "v:lua.vim.lsp.buf.completion()")
+
 -- Don't forget to install shellcheck!
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = 'sh',
@@ -35,6 +44,7 @@ return {
 		'neovim/nvim-lspconfig',
 		config = function()
 			require('lspconfig').lua_ls.setup {}
+			require('lspconfig').jdtls.setup {}
 		end,
 	},
 	'mfussenegger/nvim-jdtls',
