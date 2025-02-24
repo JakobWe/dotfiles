@@ -21,7 +21,7 @@ set smartcase
 "set signcolumn=yes
 set updatetime=250
 
-set completeopt=menuone,noinsert
+set completeopt=menu,menuone,noselect
 
 
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
