@@ -44,14 +44,17 @@ return {
 				local path = actions_state.get_selected_entry().path
 				local regex = "^(.*/)"
 				local result = string.match(path, regex)
-				vim.cmd(':cd ' .. result)
+
 				actions.close(prompt_bufnr)
+				vim.cmd(':cd ' .. result)
+				vim.cmd(':Ex ' .. result)
+				return true
 			end
 
 
 			vim.keymap.set('n', '<leader>fp',
 				function()
-						builtin.find_files({
+					builtin.find_files({
 						search_file = 'pom.xml',
 						cwd = '~',
 						attach_mappings = function(_, map)
