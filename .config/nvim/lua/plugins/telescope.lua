@@ -14,7 +14,7 @@ return {
 							"filename_first"
 						},
 					},
-				}
+				},
 			}
 			telescope.load_extension('fzf')
 
@@ -50,15 +50,20 @@ return {
 				return true
 			end
 
+			vim.keymap.set('n', '<leader>f',
+				function()
+					vim.cmd("!rm -rf " .. vim.fn.expand("~/.local/state/nvim/mycache/"))
+				end)
 
 			vim.keymap.set('n', '<leader>fp',
 				function()
 					builtin.find_files({
 						--search_file = 'pom.xml',
-						find_command =  { vim.fn.expand("~/.vim/scripts/pomxml_cache.sh") },
-												--find_command = 'cat /home/jakob/.local/state/nvim/mycache/pomxml.txt',
-						--find_command = 'find ~ 2>/dev/null -name .git -prune -not -path "*/.*/.*"',
-						--cwd = '~',
+						find_command = { "bash", "/Users/jakob/.vim/scripts/pomxml_cache.sh" },
+						path_display = {
+							--"filename_first"
+							"smart"
+						},
 						attach_mappings = function(_, map)
 							map("n", "<cr>", change_to_files_directory)
 							map("i", "<cr>", change_to_files_directory)
@@ -103,6 +108,7 @@ return {
 				local regex = "^(.*/)"
 				local result = string.match(path, regex)
 
+				print(result)
 				actions.close(prompt_bufnr)
 				vim.cmd(':cd ' .. result)
 				vim.cmd(':Ex ' .. result)
