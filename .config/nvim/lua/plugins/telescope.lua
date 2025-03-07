@@ -59,7 +59,7 @@ return {
 				function()
 					builtin.find_files({
 						--search_file = 'pom.xml',
-						find_command = { "bash", "/Users/jakob/.vim/scripts/pomxml_cache.sh" },
+						find_command = { "bash", vim.fn.expand("~/.vim/scripts/pomxml_cache.sh") },
 						path_display = {
 							--"filename_first"
 							"smart"
