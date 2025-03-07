@@ -68,6 +68,11 @@ endif
 nmap <a-p> "0p
 nmap <leader>r :reg<CR>
 
+nmap <a-k> {
+nmap <a-j> }
+
+
+
 nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
 
 hi Normal guibg=NONE ctermbg=NONE
