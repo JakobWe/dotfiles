@@ -19,21 +19,20 @@ find_command () {
 # --glob '.git' \
 
   rg --files --hidden \
-		--glob 'Jenkinsfile' \
 		--glob '!**/Library/**' \
 		--glob '!**/.local/**' \
+		--glob '!**/.gradle/**' \
 		--glob '!**/.Trash' \
 		~ \
 		2>/dev/null \
+		| rg 'Jenkinsfile|pom.xml' \
 		> "$catfile_full"
 
 }
 
 if [ ! -f "$catfile_full" ]; then
- find_command
+	find_command
 fi
 
-searchresults=$(cat "$catfile_full")
 
-echo "$searchresults"
-#find_command &
+cat "$catfile_full"
