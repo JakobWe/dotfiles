@@ -1,10 +1,11 @@
 nnoremap <SPACE> <Nop>
 let mapleader = " "
 
+"Swap Escape and Caps lock:
+"on linux: setxkbmap -option caps:swapescape
 
 "Key repeat on mac os:
 "defaults write -g ApplePressAndHoldEnabled -bool false
-
 
 syntax on
 filetype on
@@ -66,9 +67,6 @@ endif
 
 
 nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
-
-
-
 
 hi Normal guibg=NONE ctermbg=NONE
 
