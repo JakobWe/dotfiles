@@ -27,7 +27,7 @@ set completeopt=menu,menuone,noselect
 
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
 map ö /
-map Ö ?
+map Ö :%s/
 nnoremap ; ,
 nnoremap , ;
 
