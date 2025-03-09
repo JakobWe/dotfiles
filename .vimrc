@@ -26,10 +26,10 @@ set completeopt=menu,menuone,noselect
 
 
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
-map ä /
-map ö ;
-map Ö ,
-
+map ö /
+map Ö ?
+nnoremap ; ,
+nnoremap , ;
 
 nmap <leader><c-s> :w<CR>
 "imap <leader><c-s> <Esc>:w<CR>a
@@ -43,19 +43,6 @@ nmap <c-l> <c-w><c-l>
 nmap <c-j> <c-w><c-j>
 nmap <c-k> <c-w><c-k>
 
-
-"Easymotion setup for vim, in nvim it is done by packer
-if !has('nvim')
-  call plug#begin()
-  Plug 'easymotion/vim-easymotion' 
-  call plug#end()
-
-  nmap s <Plug>(easymotion-overwin-f)
-  let g:EasyMotion_smartcase = 1
-  nmap <Leader>L <Plug>(easymotion-overwin-line)
-  nmap <Leader>w <Plug>(easymotion-overwin-w)
-endif
-
 "System clipboard
 if has('mac')
   map <Leader>y "*y
@@ -66,7 +53,9 @@ elseif has('unix')
 endif
 
 nmap <a-p> "0p
+vmap <a-p> "0p
 nmap <leader>r :reg<CR>
+vmap <leader>r :reg<CR>
 
 
 nmap <a-l> [m
@@ -80,4 +69,16 @@ nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
 
 hi Normal guibg=NONE ctermbg=NONE
 
+set undofile
+if has("persistent_undo")
+   let target_path = expand('~/.undodir')
 
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+    let &undodir=target_path
+    set undofile
+endif
