@@ -57,12 +57,11 @@ vmap <a-p> "0p
 nmap <leader>r :reg<CR>
 vmap <leader>r :reg<CR>
 
-
-nmap <a-l> [m
-nmap <a-h> ]m
-
-nmap <a-k> {
+nmap <a-k> { 
 nmap <a-j> }
+
+nmap <a--> [m
+nmap <a-+> ]m
 
 
 nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
