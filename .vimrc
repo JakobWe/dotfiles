@@ -14,8 +14,8 @@ set number
 set nowrapscan
 set scrolloff=10
 set scroll=5
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 set ignorecase
 set smartcase
