@@ -68,9 +68,12 @@ nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
 
 hi Normal guibg=NONE ctermbg=NONE
 
-set undofile
 if has("persistent_undo")
-   let target_path = expand('~/.undodir')
+ if has('nvim')
+   let target_path = expand('~/.undodir/nvim')
+ else
+   let target_path = expand('~/.undodir/vim')
+ endif
 
     " create the directory and any parent directories
     " if the location does not exist.
