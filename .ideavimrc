@@ -18,3 +18,4 @@ vmap V <Action>(EditorUnSelectWord)
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'machakann/vim-highlightedyank'
