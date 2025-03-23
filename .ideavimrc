@@ -14,3 +14,7 @@ vnoremap V <Nop>
 
 vmap v <Action>(EditorSelectWord)
 vmap V <Action>(EditorUnSelectWord)
+
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
