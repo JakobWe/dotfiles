@@ -66,6 +66,8 @@ nmap <a-+> ]m
 
 nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
 
+nmap <leader>e :Ex<CR>
+
 hi Normal guibg=NONE ctermbg=NONE
 
 if has("persistent_undo")

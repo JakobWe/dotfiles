@@ -12,5 +12,5 @@ return {
 
 
 
-'xiyaowong/transparent.nvim'
+	'xiyaowong/transparent.nvim'
 }
