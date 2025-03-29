@@ -4,7 +4,7 @@ vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>")
 
 print("Hello World")
 
-require('config.lazy')
+require('init_lazy')
 
 require('colors')
 
@@ -16,8 +16,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.lsp.enable({'jdtls', 'bash-language-server', 'lua_ls'})
 
+vim.lsp.enable({'jdtls', 'bash-language-server', 'lua_ls'})
 vim.diagnostic.config({
   virtual_lines = true
 })
