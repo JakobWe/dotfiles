@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 
-vim.lsp.enable({'jdtls', 'bash-language-server', 'lua_ls'})
+vim.lsp.enable({'jdtls', 'bash-language-server', 'lua_ls', 'pyright'})
 vim.diagnostic.config({
   virtual_lines = true
 })

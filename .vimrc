@@ -26,10 +26,13 @@ set completeopt=menu,menuone,noselect
 
 
 "Keybindings that make some common keys easier to reach on a qwertz keyboard
-map ö /
-map Ö :%s/
-nnoremap ; ,
-nnoremap , ;
+" nnoremap ; ,
+" nnoremap , ;
+map - /
+map ö ;
+map Ö :
+
+imap jj <Esc>
 
 nmap <leader><c-s> :w<CR>
 "imap <leader><c-s> <Esc>:w<CR>a
