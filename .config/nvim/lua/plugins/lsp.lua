@@ -4,6 +4,9 @@ vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
 
+vim.keymap.set("n", "gl", vim.diagnostic.open_float)
+
+
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)

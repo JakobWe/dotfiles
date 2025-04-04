@@ -48,11 +48,13 @@ nmap <c-k> <c-w><c-k>
 
 "System clipboard
 if has('mac')
-  map <Leader>y "*y
-  map <Leader>p "*p
+  " map <Leader>y "*y
+  " map <Leader>p "*p
+  map <Leader> "*
 elseif has('unix')
-  map <Leader>y "+y
-  map <Leader>p "+p
+  " map <Leader>y "+y
+  " map <Leader>p "+p
+  map <Leader> "+
 endif
 
 nmap <a-p> "0p

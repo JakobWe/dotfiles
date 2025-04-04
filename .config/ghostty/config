@@ -22,6 +22,8 @@ keybind=ctrl+shift+v=paste_from_clipboard
 
 # keybind=space>t>t=new_tab
 
+keybind=ctrl+j=scroll_page_lines:1
+keybind=ctrl+k=scroll_page_lines:-1 
 
 # keybind=ctrl+shift+w=close_window
 # keybind=global:cmd+t=toggle_quick_terminal
