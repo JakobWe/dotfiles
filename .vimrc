@@ -32,12 +32,11 @@ map Ö :
 
 imap jj <Esc>
 
-nmap <leader><c-s> :w<CR>
-"imap <leader><c-s> <Esc>:w<CR>a
-vmap <leader><c-s> <Esc>:w<CR>a
+nmap <leader>w :w<CR>
+vmap <leader>w <Esc>:w<CR>
 
-nmap <Leader><c-w> <Esc>:q<CR>
-vmap <Leader><c-w> <Esc>:q<CR>
+nmap <Leader>q <Esc>:q<CR>
+vmap <Leader>q <Esc>:q<CR>
 
 nmap <c-h> <c-w><c-h>
 nmap <c-l> <c-w><c-l>

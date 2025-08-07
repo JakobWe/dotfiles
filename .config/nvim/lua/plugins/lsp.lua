@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
---vim.keymap.set("i", "<leader>ll", vim.lsp.buf.completion.get())
+vim.keymap.set("i", "<leader>ll", function() vim.lsp.completion.get() end)
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
 
