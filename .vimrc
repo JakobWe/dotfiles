@@ -13,7 +13,7 @@ set relativenumber
 set number
 set nowrapscan
 set scrolloff=10
-set scroll=5
+set scroll=10
 
 set ignorecase
 set smartcase
@@ -43,6 +43,19 @@ nmap <c-l> <c-w><c-l>
 nmap <c-j> <c-w><c-j>
 nmap <c-k> <c-w><c-k>
 
+
+"Scrolling based on system
+if has('mac')
+  nmap º ]m
+  nmap ∆ [m
+elseif has('unix')
+  nmap <a-j> ]m
+  nmap <a-k> [m
+endif
+
+
+
+
 "System clipboard
 if has('mac')
   " map <Leader>y "*y
@@ -58,12 +71,6 @@ nmap <a-p> "0p
 vmap <a-p> "0p
 nmap <leader>r :reg<CR>
 vmap <leader>r :reg<CR>
-
-nmap <a-k> { 
-nmap <a-j> }
-
-nmap <a--> [m
-nmap <a-+> ]m
 
 
 nmap <leader>dk :!/bin/bash -c "~/.vim/scripts/docker_purge.sh" <CR><CR>
