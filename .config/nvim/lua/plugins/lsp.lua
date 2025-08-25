@@ -4,6 +4,9 @@ vim.keymap.set("i", "<leader>ll", function() vim.lsp.completion.get() end)
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover)
 
+-- Set up as a telescope keybind already:
+-- vim.keymap.set("n", "<leader>fu", find usages)
+
 vim.keymap.set("n", "<F2>", function() vim.diagnostic.jump({count=1,float=true}) end)
 vim.keymap.set("n", "<F14>", function() vim.diagnostic.jump({count=-1,float=true}) end)
 
