@@ -1,12 +1,15 @@
 source ~/.vimrc
 
-nmap <leader>h :action HarpoonerToggleQuickMenu<cr>
+nmap <leader>hm :action HarpoonerToggleQuickMenu<cr>
 nmap <leader>a :action HarpoonerAddFile<cr>
 
 nmap <C-1> :action HarpoonerOpenFile0<cr>
 nmap <C-2> :action HarpoonerOpenFile1<cr>
 nmap <C-3> :action HarpoonerOpenFile2<cr>
 nmap <C-4> :action HarpoonerOpenFile3<cr>
+
+nmap <leader>hn <action>(HarpoonerNextFileAction)
+nmap <leader>hp <action>(HarpoonerPreviousFileAction)
 
 vnoremap v <Nop>
 vnoremap V <Nop>
@@ -17,6 +20,16 @@ vmap V <Action>(EditorUnSelectWord)
 nmap <Leader>ff <Action>(GotoFile)
 nmap <Leader>fg <Action>(FindInPath)
 
+
+
+nmap <leader>rc :action Run<cr>
+nmap <leader>rt :action ContextRun<cr>
+nmap <leader>rr :action Rerun<cr>
+
+
+set quickscope
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
+Plug 'justinmk/vim-sneak'
