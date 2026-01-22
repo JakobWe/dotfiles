@@ -1,47 +1,32 @@
---local capabilities = vim.lsp.protocol.make_client_capabilities()
--- local capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-
 local env = {
   HOME = vim.uv.os_homedir(),
   XDG_CACHE_HOME = os.getenv 'XDG_CACHE_HOME',
-  JDTLS_JVM_ARGS = os.getenv 'JDTLS_JVM_ARGS',
 }
 
 local function get_cache_dir()
-  return env.XDG_CACHE_HOME and env.XDG_CACHE_HOME or env.HOME .. '/.cache'
+  return env.XDG_CACHE_HOME or (env.HOME .. '/.cache')
 end
 
-local function get_jdtls_cache_dir()
-  return get_cache_dir() .. '/jdtls'
+local function get_jdtls_workspace_dir(project_name)
+  return get_cache_dir() .. '/jdtls/workspace/' .. project_name
 end
-
-local function get_jdtls_config_dir()
-  return get_jdtls_cache_dir() .. '/config'
-end
-
-local function get_jdtls_workspace_dir()
-  return get_jdtls_cache_dir() .. '/workspace'
-end
-
 
 return {
-    cmd = {
+  cmd = function()
+    local root_dir = require('lspconfig.util').root_pattern(
+      'gradlew', 'mvnw', '.git'
+    )(vim.fn.getcwd())
+
+    local project_name = vim.fn.fnamemodify(root_dir, ':p:h:t')
+
+    return {
       'jdtls',
       '-data',
-      get_jdtls_workspace_dir(),
-    },
-  root_markers = { 'gradlew', '.git', 'mvnw' },
+      get_jdtls_workspace_dir(project_name),
+    }
+  end,
+
+  root_markers = { 'gradlew', 'mvnw', '.git' },
   filetypes = { 'java' },
 }
-
-
--- return {
---   cmd = { 'jdtls'},
---   root_markers = { 'gradlew', '.git', 'mvnw' },
---   filetypes = { 'java' },
---   --capabilities = capabilities
--- }
-
-
 

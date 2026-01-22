@@ -46,13 +46,15 @@ nmap <c-k> <c-w><c-k>
 
 "Scrolling based on system
 if has('mac')
-  nmap º ]m
-  nmap ∆ [m
+  nnoremap º 5<C-e>
+  nnoremap ∆ 5<C-y>
+  vnoremap º 5<C-e>
+  vnoremap ∆ 5<C-y>
+
 elseif has('unix')
   nmap <a-j> ]m
   nmap <a-k> [m
 endif
-
 
 
 
@@ -95,3 +97,19 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
+
+
+
+function! CopyToClipboard()
+  let l:txt = @"
+  if empty(l:txt)
+    echo "Nothing yanked"
+    return
+  endif
+
+  let l:b64 = substitute(system('base64', l:txt), '\n', '', 'g')
+  call writefile(["\033]52;c;" . l:b64 . "\007"], "/dev/tty", "b")
+endfunction
+
+
+nnoremap gy :call CopyToClipboard()<CR>
