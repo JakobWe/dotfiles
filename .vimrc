@@ -52,8 +52,15 @@ if has('mac')
   vnoremap ∆ 5<C-y>
 
 elseif has('unix')
-  nmap <a-j> ]m
-  nmap <a-k> [m
+  " nmap <a-j> ]m
+  " nmap <a-k> [m
+
+  nnoremap <a-j> 5<C-e>
+  nnoremap <a-k> 5<C-y>
+  vnoremap <a-j> 5<C-e>
+  vnoremap <a-k> 5<C-y>
+
+  
 endif
 
 
