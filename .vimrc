@@ -27,8 +27,8 @@ set completeopt=menu,menuone,noselect
 " nnoremap ; ,
 " nnoremap , ;
 map - /
-map ö ;
-map Ö :
+map ö /
+map Ö *
 
 imap jj <Esc>
 
